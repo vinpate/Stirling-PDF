@@ -23,11 +23,13 @@ import { PolicyCatalogueTable } from "@portal/components/policies/PolicyCatalogu
 import { PolicyDetailPanel } from "@portal/components/policies/PolicyDetailPanel";
 import { PolicySetupWizard } from "@portal/components/policies/PolicySetupWizard";
 import { useAiEngineEnabled } from "@portal/hooks/useAiEngineEnabled";
+import { useConnectGate } from "@portal/hooks/useConnectGate";
 import "@portal/views/Policies.css";
 
 export function Policies() {
   const { t } = useTranslation();
   const queryClient = useQueryClient();
+  const { gated, connect } = useConnectGate();
   const state = usePoliciesOverview();
   const { data, loading, error: fetchError } = state;
   const { isLoading } = useSectionFlags(state);
@@ -91,6 +93,12 @@ export function Policies() {
         }));
 
   function openEntry(entry: CatalogueEntry) {
+    // Setting up or changing a policy needs a linked account, so ask for one rather than opening
+    // an editor whose save would fail. Viewing the catalogue stays open to everyone.
+    if (gated) {
+      connect();
+      return;
+    }
     // Block setup of an AI-required policy until the engine is confirmed on (so a
     // click during the app-config load can't open a wizard for a disabled
     // feature); a configured policy stays openable so it can be paused/deleted.
