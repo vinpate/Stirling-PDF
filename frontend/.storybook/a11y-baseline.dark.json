@@ -1475,9 +1475,6 @@
   "editor/src/portal/components/account-link/LinkAccountModal.stories.tsx :: Reauth": [
     "color-contrast"
   ],
-  "editor/src/portal/components/account-link/LinkGate.stories.tsx :: Gated": [
-    "color-contrast"
-  ],
   "editor/src/portal/components/account-link/LinkedInstancesTable.stories.tsx :: Default": [
     "color-contrast",
     "empty-table-header"
@@ -1515,9 +1512,6 @@
     "color-contrast"
   ],
   "editor/src/portal/components/billing/InvoicesList.stories.tsx :: Default": [
-    "color-contrast"
-  ],
-  "editor/src/portal/components/billing/LinkAccountPrompt.stories.tsx :: Default": [
     "color-contrast"
   ],
   "editor/src/portal/components/billing/PaymentMethodCard.stories.tsx :: Managed In Stripe": [

@@ -1726,9 +1726,6 @@
   "editor/src/portal/components/billing/InvoicesList.stories.tsx :: Default": [
     "color-contrast"
   ],
-  "editor/src/portal/components/billing/LinkAccountPrompt.stories.tsx :: Default": [
-    "color-contrast"
-  ],
   "editor/src/portal/components/billing/PrepaidCapacityCard.stories.tsx :: Bundle Healthy": [
     "aria-progressbar-name",
     "color-contrast"
