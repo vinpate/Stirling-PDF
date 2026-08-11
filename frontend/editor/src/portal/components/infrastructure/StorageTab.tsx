@@ -21,6 +21,7 @@ import {
   type StorageConfig,
 } from "@portal/api/infrastructure";
 import { SectionHeader } from "@portal/components/infrastructure/SectionHeader";
+import { EncryptionPanel } from "@portal/components/infrastructure/EncryptionPanel";
 import { pct } from "@portal/components/infrastructure/infraFormat";
 
 const PROVIDER_ICON: Record<
@@ -238,6 +239,10 @@ export function StorageTab() {
             </div>
           </div>
         </Card>
+      </section>
+
+      <section>
+        <EncryptionPanel />
       </section>
     </div>
   );
