@@ -255,14 +255,14 @@
     {
       "moduleName": "@stripe/react-stripe-js",
       "moduleUrl": "https://github.com/stripe/react-stripe-js",
-      "moduleVersion": "4.0.2",
+      "moduleVersion": "6.8.0",
       "moduleLicense": "MIT",
       "moduleLicenseUrl": "https://opensource.org/licenses/MIT"
     },
     {
       "moduleName": "@stripe/stripe-js",
       "moduleUrl": "https://github.com/stripe/stripe-js",
-      "moduleVersion": "7.9.0",
+      "moduleVersion": "9.10.0",
       "moduleLicense": "MIT",
       "moduleLicenseUrl": "https://opensource.org/licenses/MIT"
     },
